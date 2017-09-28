@@ -4279,7 +4279,7 @@ var PptxGenJS = function(){
 					type: 'online',
 					extn: strExtn,
 					data: 'dummy',
-					rId:  (intRels+1),
+					rId:  intRels,
 					Target: strLink
 				});
 				gObjPptx.slides[slideNum].data[slideObjNum].mediaRid = slideObjRels[slideObjRels.length-1].rId;
@@ -4289,8 +4289,8 @@ var PptxGenJS = function(){
 					path: 'preencoded.png',
 					type: 'image/png',
 					extn: 'png',
-					rId:  (intRels+2),
-					Target: '../media/image' + intRels + '.png'
+					rId:  (intRels+1),
+					Target: '../media/preview' + intRels + '.png'
 				});
 			}
 			else {
@@ -4302,7 +4302,7 @@ var PptxGenJS = function(){
 					type: strType+'/'+strExtn,
 					extn: strExtn,
 					data: (strData || ''),
-					rId:  (intRels+1),
+					rId:  intRels,
 					Target: '../media/media' + intRels + '.' + strExtn
 				});
 				gObjPptx.slides[slideNum].data[slideObjNum].mediaRid = slideObjRels[slideObjRels.length-1].rId;
@@ -4311,7 +4311,7 @@ var PptxGenJS = function(){
 					type: strType+'/'+strExtn,
 					extn: strExtn,
 					data: (strData || ''),
-					rId:  (intRels+2),
+					rId:  (intRels+1),
 					Target: '../media/media' + intRels + '.' + strExtn
 				});
 				// Add preview/overlay image
@@ -4320,8 +4320,8 @@ var PptxGenJS = function(){
 					path: 'preencoded.png',
 					type: 'image/png',
 					extn: 'png',
-					rId:  (intRels+3),
-					Target: '../media/image' + intRels + '.png'
+					rId:  (intRels+2),
+					Target: '../media/preview' + intRels + '.png'
 				});
 			}
 
